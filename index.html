@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Star Rating</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <div class="post">
+        <div class="text">Thanks for rating us!</div>
+        <div class="edit">Edit  Response<i class="fas fa-edit edito"></i></div>
+
+    </div>
+    <div class="wrapper">
+        <input type="radio" name="rate" id="star-1" />
+        <input type="radio" name="rate" id="star-2" />
+        <input type="radio" name="rate" id="star-3" />
+        <input type="radio" name="rate" id="star-4" />
+        <input type="radio" name="rate" id="star-5" />
+        <div class="content">
+            <div class="outer">
+                <div class="emojis">
+                    <li class="slideImg"><img src="emojis/emoji-1.png" alt="" /></li>
+                    <li><img src="emojis/emoji-2.png" alt="" /></li>
+                    <li><img src="emojis/emoji-3.png" alt="" /></li>
+                    <li><img src="emojis/emoji-4.png" alt="" /></li>
+                    <li><img src="emojis/emoji-5.png" alt="" /></li>
+                </div>
+            </div>
+            <div class="stars">
+                <label for="star-1" class="star-1 fas fa-star"></label>
+                <label for="star-2" class="star-2 fas fa-star"></label>
+                <label for="star-3" class="star-3 fas fa-star"></label>
+                <label for="star-4" class="star-4 fas fa-star"></label>
+                <label for="star-5" class="star-5 fas fa-star"></label>
+            </div>
+        </div>
+        <div class="footer">
+            <span class="text"></span>
+            <span class="numb"></span>
+        </div>
+        <form action="#" class="form">
+            <div class="textarea">
+                <textarea cols="30" placeholder="Describe your experience.."></textarea>
+                <div class="btn">
+                    <button type="submit">Post</button>
+                    
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        const btn = document.querySelector("button");
+        const post = document.querySelector(".post");
+        const widget = document.querySelector(".wrapper");
+        const editBtn = document.querySelector(".edit");
+        btn.onclick = () => {
+            widget.style.display = "none";
+            post.style.display = "block";
+            editBtn.onclick = () => {
+                widget.style.display = "block";
+                post.style.display = "none";
+            };
+            return false;
+        };
+    </script>
+</body>
+
+</html>
